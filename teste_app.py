@@ -75,7 +75,7 @@ if password == 'teste123':  # Se acertou a senha, fazer:
     fast = 10
     mom_janela = 42
     multiplo = 0.6
-    corte = st.input("Escolher apenas os últimos X dias")
+    corte = st.inputbox("Escolher apenas os últimos X dias")
     mom_janela = st.selectbox("Escolher janela do trend", [63, 42, 21, 16, 10, 4])
 
     completo_normal, vol_mom, vol_mac, vol_ibov = mom_mac(corte, slow, fast, mom_janela, multiplo)
