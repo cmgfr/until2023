@@ -77,7 +77,7 @@ if password == 'teste123':  # Se acertou a senha, fazer:
     multiplo = 0.6
     
     completo_normal, vol_mom, vol_mac, vol_ibov = mom_mac(corte, slow, fast, mom_janela, multiplo)
-    st.plotly_chart(px.line(completo_normal)
+    st.plotly_chart(px.line(completo_normal))
     vols = pd.concat([vol_mom, vol_mac, vol_ibov], axis = 1)
     st.plotly_chart(px.line(vol))
     
