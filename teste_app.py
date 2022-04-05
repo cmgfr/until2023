@@ -2,6 +2,7 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
+import plotly.express as px
 
 st.set_page_config(page_title="until2023",
                    page_icon=None,
@@ -76,7 +77,7 @@ if password == 'teste123':  # Se acertou a senha, fazer:
     multiplo = 0.6
     
     completo_normal, vol_mom, vol_mac, vol_ibov = mom_mac(corte, slow, fast, mom_janela, multiplo)
-    st.pyplot(completo_normal.plot())
+    st.plotly_chart(px.line(completo_normal)
     vols = pd.concat([vol_mom, vol_mac, vol_ibov], axis = 1)
-    st.pyplot(vols.plot())
+    st.plotly_chart(px.line(vol))
     
